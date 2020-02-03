@@ -80,3 +80,14 @@ module.exports = {
 };
 ```
 3. Minimal example
+4. 缓存
+```
+new MiniCssExtractPlugin({
+      filename: '[name].[contenthash].css',
+      chunkFilename: '[id].[contenthash].css',
+      ignoreOrder: false, 
+    }),
+```
+## 切换模式
+再复制一份webpack.config.js
+把
