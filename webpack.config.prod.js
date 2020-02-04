@@ -11,8 +11,10 @@ module.exports = {
   //production 发布模式
     module: {
       rules: [
+        ...base.module.rules,
         {
-          test: /.css$/,
+          test: /\.(scss|css|less|styl)$/,
+          //这里很重要，由于base中没有文件输出的路由，所以这里要覆盖
           use: [
             {
               loader: MiniCssExtractPlugin.loader,
@@ -35,35 +37,4 @@ module.exports = {
     //这个对象用于输出css文件
 
   ],
-  // module: {
-  //   rules: [
-  //     {
-  //       test: /\.(png|svg|jpg|gif)$/,
-  //       //正则，以....结尾
-  //       use: ["file-loader"]
-  //     },
-  //     {
-  //       test: /\.styl$/,
-        
-  //       loader: ["style-loader", "css-loader", "stylus-loader"]
-  //     },
-  //     {
-  //       test: /\.less$/,
-  //       loader: ["style-loader", "css-loader", "less-loader"]
-  //     },
-  //     {
-  //       test: /\.scss$/i,
-  //       use: [
-  //         "style-loader",
-  //         "css-loader",
-  //         {
-  //           loader: "sass-loader",
-  //           options: {
-  //             implementation: require("dart-sass")
-  //           }
-  //         }
-  //       ]
-  //     }
-  //   ]
-  // }
 };

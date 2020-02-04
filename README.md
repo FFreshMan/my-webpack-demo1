@@ -98,3 +98,28 @@ plugin:n to 1 or 1 to n 扩展webpack功能
 >miniCssExtractPlugin
 >htmlWebpackPlugin
 ## npm install sass-loader dart-sass webpack --save-dev (scss)
+见base.js  module.rules部分
+## less-loader
+```
+npm install --save-dev less-loader less
+```
+## stylus
+```
+npm install stylus-loader stylus --save-dev
+```
+## img
+```
+npm install image-webpack-loader --save-dev
+npm i file-loader --save-dev
+```
+## 懒加载
+
+## ... 扩展运算符
+自定义的属性在拓展运算符后面，则拓展运算符对象内部同名的属性将被覆盖掉。同理，自定义的属性在拓展运算度前面，则变成设置新对象默认属性值。
+```
+let person = {name: "Amy", age: 15};
+let someone = { ...person, name: "Mike", age: 17};
+let someone1 = {  name: "Mike", age: 17,...person};
+console.log(someone);  //{name: "Mike", age: 17}
+console.log(someone1);  //{name: "Amy", age: 15}
+```

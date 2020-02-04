@@ -19,8 +19,9 @@ module.exports = {
   //production 发布模式
     module: {
       rules: [
+        ...base.module.rules,
         {
-          test: /.css$/,
+          test: /\.css$/,
           use: ['style-loader', 'css-loader'],
         },
       ],
