@@ -34,7 +34,7 @@ module.exports = {
 1. npm i save-dev css-loader
 2. npm i save-dev style-loader
 //yarn add css-loader --dev
-##  npm install --save-dev webpack-dev-server
+##  npm install --save-dev webpack-dev-server 本地预览
 1. 
 ```
 devtool: 'inline-source-map',
@@ -47,7 +47,7 @@ devtool: 'inline-source-map',
  "start": "webpack-dev-server --open",
  ```
 https://webpack.js.org/guides/development/#root
-## MiniCssExtractPlugin
+## MiniCssExtractPlugin 生成css文件
 https://webpack.js.org/plugins/mini-css-extract-plugin/#root
 
 1. npm install --save-dev mini-css-extract-plugin
@@ -89,5 +89,12 @@ new MiniCssExtractPlugin({
     }),
 ```
 ## 切换模式
-再复制一份webpack.config.js
-把
+复制一份webpack.config.js
+相同部分合并到base中，在其他js中引入，然后覆盖需要的属性
+## loader和plugin的区别
+loader:1 to 1 用于加载文件，功能单一
+>babel loader ; css loader; style loader 
+plugin:n to 1 or 1 to n 扩展webpack功能
+>miniCssExtractPlugin
+>htmlWebpackPlugin
+## npm install sass-loader dart-sass webpack --save-dev (scss)
