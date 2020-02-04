@@ -1,0 +1,18 @@
+@color:red;  
+body{
+    background: @color;
+}
+
+body{
+    background:blue;
+}
+
+body{
+    background: yellow;
+}
+
+c=grey
+body{
+    background: c;
+}
+
