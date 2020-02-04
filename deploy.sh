@@ -1,8 +1,9 @@
 npm run build &&
-git checkout gh-pages &&
-rm -rf *.html *.js *.css *.png &&
+git branch gh-pages &&
+rm -rf *.html *.js *.css *.png src *.json &&
 mv dist/* ./ &&
 rm -rf dist;
 git add . &&
 git commit -m 'update' &&
-git push
+git push&&
+git checkout -

@@ -17,6 +17,7 @@ const button=document.createElement("button")
 button.innerHTML=`懒加载`
 button.onclick=()=>{
     const promise=new Promise((resolve,reject)=>{resolve(import("./x.js"))})
+    //import这里new了一个promise对象，所以可以省略
     promise.then((module)=>{
         module.default()
     },()=>{ 
